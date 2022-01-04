@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="#">
+        <select>
+            <optgroup label="Coffee">
+                <option>Americano</option>
+                <option>Espresso</option>
+                <option>Caffe Latte</option>
+                <option>Cappuccino</option>
+            </optgroup>
+            <optgroup label="Juice"> 
+                <option>Orange Juice</option>
+                <option>Apple Juice</option>
+                <option>Grapefruit Juice</option>
+            </optgroup>
+        </select>
+    </form>
+
+    <br><br><br>
+
+    <!--fruit라는 list를 참조하는 input창-->
+    <!--선택지가 많을 때 유용. 자동완성 기능 지원함.-->
+    <input type="text" list="fruit">
+
+        <datalist id="fruit">
+            <option>Apple</option>
+            <option>Orange</option>
+            <option>Mango</option>
+            <option>Pineapple</option>
+            <option>Grape</option>
+        </datalist>
+    
+</body>
+</html>

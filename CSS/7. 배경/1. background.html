@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 550px;
+            height: 350px;
+            border: 2px solid gray;
+
+            /*
+            background-color: yellow; 기본값 transparent
+            background-image: url('./images/sky.jpg'); 기본값 none
+            background-size: auto;
+             
+            기본값 auto. auto는 원본 크기임
+            cover: 이미지의 원본 비율 유지하면서 이미지의 크기를 요소의 더 긴 영역에 맞추게된다.
+            contain: 이미지의 원본 비율 유지하면서 이미지의 크기를 요소의 더 짧은 영역에 맞추게된다.
+            
+            background-repeat: no-repeat; 기본값 repeat
+            
+            # %, px, em으로 지정이 가능
+            가로축과 세로축을 한번에 지정 가능
+            가로축만 사용하면 세로축은 가운데 정렬
+
+            background-position: 50% 30%;
+            */
+            
+            /* 색상 경로 반복여부 위치 / 크기 */
+            background: yellow url('./images/sky.jpg') no-repeat 0% 0% / cover;         
+            
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="box"></div>
+
+</body>
+</html>
