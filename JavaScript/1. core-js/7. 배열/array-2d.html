@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+
+    //우리반 학생들 4과목 점수 (국영수탐)
+    // var kim = [67, 89, 92, 32];
+    // var lee = [100, 87, 55, 67];
+    // var park = [22, 44, 100, 22];
+
+    var ourStrudentScores = [
+      [67, 89, 92, 32],
+      [100, 87, 55, 67],
+      [22, 44, 100, 22],
+      [100, 100, 92, 44]
+    ];
+
+    console.log(ourStrudentScores);
+    console.log(ourStrudentScores[1]);
+    console.log(ourStrudentScores[0][2]);
+
+    //우리반 한 학생의 평균의 총합을 저장할 변수
+    var ourAverages = 0;
+
+    for(var studentScors of ourStrudentScores) {
+
+      var eachTotal = 0; // 한 학생의 4과목 총점
+      for(var score of studentScors) {
+        eachTotal += score;
+      }
+      //한 학생의 평균점수
+      var eachAvg = eachTotal / studentScors.length;
+      ourAverages += eachAvg;
+    }
+
+    var classAvg = ourAverages / ourStrudentScores.length;
+    console.log('우리반 평균: ' + classAvg + '점'); 
+
+  </script>
+
+</body>
+</html>
