@@ -14,7 +14,7 @@
     var idx = foods.indexOf('메롱');
     console.log('찾은 인덱스: ' + idx);
 
-    //includes(): 배열 요소의 존재 확인
+    //includes(): 배열 요소의 존재 확인 true/false로 알려줌.
     var result = foods.includes('김말이');
     console.log('탐색 결과: ' + result);
 
@@ -23,11 +23,11 @@
 
     var arr = [0,1,2,3,4,5,6,7,8,9];
 
-    var slicedArr = arr.slice(3, 7); //끝값은 미만
+    var slicedArr = arr.slice(3, 7); //끝값은 미만으로 해석된다.
     console.log(slicedArr);
 
     //reverse(): 배열은 역순으로 배치.
-    var copyArr = arr.slice(0); //원본 복사
+    var copyArr = arr.slice(0); //원본 복사 (시작 인덱스부터 끝까지 잘라냄)
     copyArr.reverse();
 
     console.log(copyArr);
@@ -42,7 +42,7 @@
     var arr1 = [10, 20, 30];
     var arr2 = [100, 300, 500];
 
-    var concateedArr = arr1.concat(arr2);
+    var concateedArr = arr1.concat(arr2); //arr1에 arr2를 붙인다.
     console.log(concateedArr);
 
   </script>

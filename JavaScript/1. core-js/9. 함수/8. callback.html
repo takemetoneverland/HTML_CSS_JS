@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+
+    //콜백 함수
+    function showNumbers(n, func) {
+      for(var i=1; i<=n; i++) {
+        func(i); //전달된 함수를 i번 만큼 호출
+      }
+    }
+
+    showNumbers(10, i => {
+      if(i % 2 === 0) {
+        console.log(i);
+      }
+    });
+
+    var plusMinus = function(a, b, callback) {
+      callback(a + b, a - b);
+    }
+
+    plusMinus(10, 20, function(res1, res2) {
+      console.log(res1);
+      console.log(res2);
+    }); 
+
+  </script>
+
+</body>
+</html>

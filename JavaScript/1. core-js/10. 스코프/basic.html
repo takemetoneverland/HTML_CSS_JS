@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+
+    var x = 'global'; //전역변수
+
+    function foo(y) { //블록 안에서는 지역변수가 우선
+      var x = 'local'; //지역변수는 해당 블록 내에서만 유효. 블록이 끝나면 메모리에서 소멸됨.
+      console.log('x: ' + x);
+      console.log('y: ' + y);
+    }
+
+    console.log('x: ' + x);
+    foo('parameter');
+
+  </script>
+
+</body>
+</html>

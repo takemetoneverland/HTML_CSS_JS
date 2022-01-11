@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    //void 함수: 리턴값이 없는 함수.
+    //void 함수는 단독 호출해서 사용. 다른 함수의 인자(매개값)로
+    //전달이 불가능하다.
+
+    function greetings(nickname) {
+      var bad_nick = ['멍청이', '바보', '쓰레기', '양아치'];
+      if(bad_nick.includes(nickname)) {
+        console.log('그런 나쁜 말은 하지 마세요!');
+        return; // 함수 강제 종료.
+        // console.log('메롱이다~'); (x) 리턴 밑에 작성한 코드는 실행 안됨!
+      }
+      console.log(nickname + '님 안녕하세요~');
+    }
+
+    // var result = greetings('쓰레기'); (x)
+    // console.log(result);
+
+    // function operateAll(n1, n2) { 에러가 나지는 않지만 하나만 리턴된다.
+    //   return n1 + n2;
+    //   return n1 - n2;
+    //   return n1 * n2;
+    //   return n1 / n2;
+    // } (x)
+
+    function operateAll(n1, n2) {
+      return {
+        plus : n1 + n2,
+        minus : n1 - n2,
+        multi : n1 * n2,
+        divide : n1 / n2
+      }
+    }
+
+    var results = operateAll(10, 2);
+    console.log(results.plus);
+    console.log(results.minus);
+    console.log(results['multi']);
+    console.log(results['divide']);  
+  
+  </script>  
+
+</body>
+</html>

@@ -9,12 +9,12 @@
   <script>
     for(var i=0; i<=10; i++) {
       if(i === 5) {
-        continue;
+        continue; //반복문이 끝나지 않고 계속 반복되는데 내가 원하는 회차에서 건너뛸 수 있게 해줌.
       }
       console.log(i);
     }
 
-    while(true) {
+    while(true) { //무한루프
       var rn = Math.floor(Math.random()*6);
       console.log('랜덤값: ' + rn);
 

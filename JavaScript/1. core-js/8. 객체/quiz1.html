@@ -30,10 +30,9 @@
     */
 
     // Q1
-    var user = {
-      name : 'John',
-      surname : 'Smith'
-    };
+    var user = {};
+    user.name = 'John',
+    user.surname = 'Smith';    
     console.log(user);
 
     user.name = 'Pete';
@@ -43,15 +42,20 @@
     console.log(user);
 
     // Q2
-    var salary = {
-      salaries : [500, 300, 200]
+    var salaries = {
+      kim : 10000000,
+      park : 16000000,
+      lee : 13000000
     };
 
-    var total = salary.salaries[0] + salary.salaries[1] + salary.salaries[2];
-    console.log(total);
+    var total = 0;
+    for(var key in salaries) {
+      total += salaries[key];
+    }
 
+    console.log('급여 총합: ' + total + '원');
     var avg = total / 3;
-    console.log(avg);    
+    console.log('급여 평균: ' + avg + '원');
 
   </script>
 
