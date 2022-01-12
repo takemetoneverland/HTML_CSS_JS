@@ -6,11 +6,11 @@ const MAX = 100;
 
 //게임에 필요한 데이터 객체
 const gameData = {
-  secret_num : Math.floor(Math.random()*MAX) + 1,
-  count : 0,
-  countdown : 6,
-  min : 1,
-  max : MAX
+  secret_num : Math.floor(Math.random()*MAX) + 1, //랜덤 숫자
+  count : 0, //횟수 카운트
+  countdown : 6, //카운트다운
+  min : 1, //최소값
+  max : MAX //최대값
 };
 
 /////////////////////////함수 정의부 //////////////////////////////
