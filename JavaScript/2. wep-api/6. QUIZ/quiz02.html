@@ -9,7 +9,7 @@
 <body>
 
   <!-- 이벤트와 innerHTML or textContent를 활용하여
-  카운트를 -->
+  카운트를 누적해서 올리거나 내려주세요. -->
   
   <h2>자바스크립트 카운트</h2>
   <input type="text" id="result" value="0" readonly>
@@ -17,21 +17,29 @@
   <button id="minus">-</button>
 
   <script>
+
     const $count = document.getElementById('result');
     const $plus = document.getElementById('plus');
     const $minus = document.getElementById('minus');
 
-    $plus.addEventListener('click', function() {
-      $count.value++;
-    });
+    // console.log($count);
+    // console.log($plus);
+    // console.log($minus);
 
-    $minus.addEventListener('click', function() {
-      if($count.value > 0) {
-        $count.value--;
-      } else {
-        alert('0 미만으로 내릴 수 없습니다.')
-      }      
-    });
+    $plus.onclick = function() {
+      // $count.value++;
+      let value = $count.getAttribute('value');
+      value++;
+      $count.setAttribute('value', value);
+    }
+
+    $minus.onclick = () => {
+      if(+$count.value === 0) {
+        alert('0미만으로 내릴 수 없습니다.');
+        return;
+      }
+      $count.value--;
+    }
     
   </script>
 
